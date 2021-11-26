@@ -1,9 +1,12 @@
 import { abcd } from "./abcd";
 import "./index.scss";
 
-for (const abc of abcd()) {
-  const div = document.createElement("div");
-  document.body.append(div);
+const box = document.querySelector(".abcd");
+if (box) {
+  for (const abc of abcd()) {
+    const div = document.createElement("div");
+    div.innerText = `${abc} here`;
 
-  div.innerText = `${abc} here`;
+    box.append(div);
+  }
 }

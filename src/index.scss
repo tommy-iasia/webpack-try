@@ -1,13 +1,28 @@
 @use "sass:color";
 
 body {
-  border-left: 2px solid #fcf;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
 }
 
-@for $i from 1 through 4 {
-  div:nth-of-type(#{$i}) {
-    margin-left: #{$i * 10px};
-    margin-top: 10px;
-    color: hsl(360deg * ($i + 5) / 10, 90%, 60%);
+.link {
+  color: #808;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #808;
+    color: #fff;
+  }
+}
+
+.abcd {
+  border-left: 2px solid #fcf;
+
+  @for $i from 1 through 4 {
+    :nth-child(#{$i}) {
+      margin-left: #{$i * 10px};
+      margin-top: 10px;
+      color: hsl(360deg * ($i + 5) / 10, 90%, 60%);
+    }
   }
 }
