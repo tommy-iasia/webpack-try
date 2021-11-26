@@ -3,7 +3,17 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src/index.ts",
-  devtool: "inline-source-map",
+  output: {
+    publicPath: "/public/",
+    path: path.resolve(__dirname, "public"),
+    filename: "bundle.js",
+  },
+
+  devServer: {
+    static: { directory: __dirname },
+    hot: true,
+  },
+
   module: {
     rules: [
       {
@@ -20,9 +30,6 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "public"),
-  },
   plugins: [new MiniCssExtractPlugin()],
+  devtool: "inline-source-map",
 };
