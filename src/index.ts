@@ -1,6 +1,9 @@
 import { abcd } from "./abcd";
-import { difference } from "lodash";
+import "./index.scss";
 
-console.log("index here");
-console.log("abcd here", abcd());
-console.log("lodash here", difference([1, 2, 3, 4], [2, 4]));
+for (const abc of abcd()) {
+  const div = document.createElement("div");
+  document.body.append(div);
+
+  div.innerText = `${abc} here`;
+}
