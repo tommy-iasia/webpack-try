@@ -24,6 +24,7 @@ _bundle.js_ and _main.css_ will be in _/public_
 The folder structure was made to fit Github Pages.
 
 Just host your project directly in (Github Project) > Settings > Pages.
+
 And select source to be project root. Press save.
 
 eg. [https://tommy-iasia.github.io/webpack-try/](https://tommy-iasia.github.io/webpack-try/)
