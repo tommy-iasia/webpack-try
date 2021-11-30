@@ -22,7 +22,7 @@ body {
     :nth-child(#{$i}) {
       margin-left: #{$i * 10px};
       margin-top: 10px;
-      color: hsl(360deg * ($i + 5) / 10, 90%, 60%);
+      color: hsl(calc(360deg * ($i + 5) / 10), 90%, 60%);
     }
   }
 }
